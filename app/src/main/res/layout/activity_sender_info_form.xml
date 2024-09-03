@@ -74,7 +74,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp" />
 
-    <!-- Country Input -->
     <EditText
         android:id="@+id/etSenderCountry"
         android:layout_width="0dp"
@@ -92,7 +91,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp" />
 
-    <!-- Address Input -->
     <EditText
         android:id="@+id/etSenderAddress"
         android:layout_width="0dp"
@@ -110,7 +108,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp" />
 
-    <!-- Next Button -->
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
