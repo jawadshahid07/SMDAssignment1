@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class ReviewInfoActivity extends AppCompatActivity {
 
     @Override
@@ -42,5 +44,14 @@ public class ReviewInfoActivity extends AppCompatActivity {
         tvReceiverCountry.setText(receiverCountry);
         tvReceiverAddress.setText(receiverAddress);
         tvReceiverContact.setText(receiverContact);
+
+        // use hook to get the FAB
+        FloatingActionButton fabBackToSender = findViewById(R.id.fabBackToSender);
+
+        // set up click listener for FAB to go to sender info activity
+        fabBackToSender.setOnClickListener(v -> {
+            Intent i = new Intent(ReviewInfoActivity.this, SenderInfoFormActivity.class);
+            startActivity(i);
+        });
     }
 }
