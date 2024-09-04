@@ -37,124 +37,124 @@
 
         <TextView
             android:id="@+id/tvNameHeader"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:text="@string/name_header"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp" />
+            />
 
         <TextView
             android:id="@+id/tvCountryHeader"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:text="@string/country_header"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"/>
+            />
 
         <TextView
             android:id="@+id/tvAddressHeader"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:text="@string/address_header"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"/>
+            />
 
         <TextView
             android:id="@+id/tvContactHeader"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:text="@string/contact_header"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"/>
+            />
 
         <TextView
             android:id="@+id/tvSenderName"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+            android:layout_marginTop="@dimen/header_padding"/>
 
         <TextView
             android:id="@+id/tvSenderCountry"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+            android:layout_marginTop="@dimen/header_padding"
+            />
 
         <TextView
             android:id="@+id/tvSenderAddress"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+            android:layout_marginTop="@dimen/header_padding"
+            />
 
         <TextView
             android:id="@+id/tvSenderContact"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+            android:layout_marginTop="@dimen/header_padding"
+            />
 
         <ImageView
             android:id="@+id/ivArrow"
-            android:layout_width="32dp"
+            android:layout_width="@dimen/column_width"
             android:layout_height="32dp"
             android:src="@drawable/arrow_icon"
-            android:layout_margin="16dp"
+            android:layout_marginTop="@dimen/review_margin"
+            android:layout_marginBottom="@dimen/review_margin"
             android:layout_gravity="center_vertical"
             android:layout_columnSpan="4"/>
 
         <TextView
             android:id="@+id/tvReceiverName"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+            />
 
         <TextView
             android:id="@+id/tvReceiverCountry"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+           />
 
         <TextView
             android:id="@+id/tvReceiverAddress"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+           />
 
         <TextView
             android:id="@+id/tvReceiverContact"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/column_width"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:gravity="center"
-            android:layout_margin="16dp"/>
+            />
     </GridLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

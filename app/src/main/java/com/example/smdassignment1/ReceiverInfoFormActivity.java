@@ -35,19 +35,33 @@ public class ReceiverInfoFormActivity extends AppCompatActivity {
                 String receiverAddress = etReceiverAddress.getText().toString();
                 String receiverContact = etReceiverContact.getText().toString();
 
-                Intent intent = new Intent(ReceiverInfoFormActivity.this, ReviewInfoActivity.class); // use intent to display next activity
+                if (receiverName.isEmpty()) {
+                    etReceiverName.setError("Name is required");
+                    etReceiverName.requestFocus();
+                } else if (receiverContact.isEmpty()) {
+                    etReceiverContact.setError("Contact is required");
+                    etReceiverContact.requestFocus();
+                } else if (receiverCountry.isEmpty()) {
+                    etReceiverCountry.setError("Country is required");
+                    etReceiverCountry.requestFocus();
+                } else if (receiverAddress.isEmpty()) {
+                    etReceiverAddress.setError("Address is required");
+                    etReceiverAddress.requestFocus();
+                } else {
+                    Intent intent = new Intent(ReceiverInfoFormActivity.this, ReviewInfoActivity.class); // use intent to display next activity
 
-                intent.putExtra("SENDER_NAME", senderName);
-                intent.putExtra("SENDER_COUNTRY", senderCountry);
-                intent.putExtra("SENDER_ADDRESS", senderAddress);
-                intent.putExtra("SENDER_CONTACT", senderContact);
-                intent.putExtra("RECEIVER_NAME", receiverName);
-                intent.putExtra("RECEIVER_COUNTRY", receiverCountry);
-                intent.putExtra("RECEIVER_ADDRESS", receiverAddress);
-                intent.putExtra("RECEIVER_CONTACT", receiverContact);
+                    intent.putExtra("SENDER_NAME", senderName);
+                    intent.putExtra("SENDER_COUNTRY", senderCountry);
+                    intent.putExtra("SENDER_ADDRESS", senderAddress);
+                    intent.putExtra("SENDER_CONTACT", senderContact);
+                    intent.putExtra("RECEIVER_NAME", receiverName);
+                    intent.putExtra("RECEIVER_COUNTRY", receiverCountry);
+                    intent.putExtra("RECEIVER_ADDRESS", receiverAddress);
+                    intent.putExtra("RECEIVER_CONTACT", receiverContact);
 
-                startActivity(intent);
-                finish();
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }

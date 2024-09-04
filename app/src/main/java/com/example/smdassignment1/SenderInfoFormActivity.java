@@ -31,16 +31,30 @@ public class SenderInfoFormActivity extends AppCompatActivity {
                 String senderAddress = etSenderAddress.getText().toString();
                 String senderContact = etSenderContact.getText().toString();
 
-                Intent intent = new Intent(SenderInfoFormActivity.this, ReceiverInfoFormActivity.class); // use intent to display next activity
+                if (senderName.isEmpty()) { // checks to ensure fields are not empty
+                    etSenderName.setError("Name is required");
+                    etSenderName.requestFocus();
+                } else if (senderContact.isEmpty()) {
+                    etSenderContact.setError("Contact is required");
+                    etSenderContact.requestFocus();
+                } else if (senderCountry.isEmpty()) {
+                    etSenderCountry.setError("Country is required");
+                    etSenderCountry.requestFocus();
+                } else if (senderAddress.isEmpty()) {
+                    etSenderAddress.setError("Address is required");
+                    etSenderAddress.requestFocus();
+                } else {
+                    Intent intent = new Intent(SenderInfoFormActivity.this, ReceiverInfoFormActivity.class); // use intent to display next activity
 
-                // add the data to be sent forward
-                intent.putExtra("SENDER_NAME", senderName);
-                intent.putExtra("SENDER_COUNTRY", senderCountry);
-                intent.putExtra("SENDER_ADDRESS", senderAddress);
-                intent.putExtra("SENDER_CONTACT", senderContact);
+                    // add the data to be sent forward
+                    intent.putExtra("SENDER_NAME", senderName);
+                    intent.putExtra("SENDER_COUNTRY", senderCountry);
+                    intent.putExtra("SENDER_ADDRESS", senderAddress);
+                    intent.putExtra("SENDER_CONTACT", senderContact);
 
-                startActivity(intent);
-                finish();
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
